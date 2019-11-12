@@ -1,0 +1,108 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+   <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=02e25e8c4c4f12a0cc9fa568ad07845a"/></script>
+   <link rel="stylesheet" type="text/css" href="css/jquery.bxslider.css">
+    <script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+    <link rel="stylesheet" href="css/grid.css">
+    <script type="text/javascript" src="js/jquery.bxslider.js"></script>
+    <style type="text/css">
+        #body {
+            padding: 0px;
+        }
+
+        #container {
+            width: 1200px;
+            margin: 0px auto;
+            padding: 0px;
+        }
+
+        /* 로고 부분 */
+        #left_logo {
+            height: 50px;
+        }
+
+        #left_logo>img {
+            width: 100%;
+            height: 100%;
+        }
+
+        #center_logo {}
+
+        #center_logo>img {
+            width: 100%;
+            height: 100%;
+        }
+
+        #right_logo {
+            background-color: blue;
+        }
+
+        /******************/
+
+        /* 메뉴 부분 */
+
+        #menuBtn>ul {
+            padding: 0px;
+            list-style: none;
+        }
+
+        #menuBtn>ul>li {
+            display: inline-block;
+            
+        }
+
+        .sml {
+            border-right: 1px solid gray;
+        }
+
+        #menuBtn>ul>li>a {
+        
+            display: inline-block;
+            width: 194px;
+            height: 50px;
+            text-decoration: none;
+            color: black;
+            text-align: center;
+            line-height: 50px;
+            
+        }
+
+        #menuBtn>ul>li>a:hover {
+            color: gray;
+        }
+
+        #menuBtn>ul>li>a:link {
+            color: black;
+            font-size: 16pt;
+        }
+
+        #AD {
+            position: fixed;
+            width: 200px;
+            height: 290px;
+            margin-left: 1200px;
+            margin-top: 80px;
+            color: black;
+        }
+        #phone{
+            width: 20px;
+            height: 20px;
+        }
+        #map{
+            width: 200px;
+            height: 250px;
+        }
+        /******************/
+        /* footer 부분 */
+        #copyright {
+            border-top: 1px solid;
+        }
+
+        #copyright {
+            height: 50px;
+        }
+
+        /******************/
+
+    </style>
+	

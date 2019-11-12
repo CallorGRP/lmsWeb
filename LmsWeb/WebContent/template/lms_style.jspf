@@ -1,0 +1,136 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    <link rel="stylesheet" type="text/css" href="../../css/jquery.bxslider.css">
+    <script type="text/javascript" src="../../js/jquery.bxslider.js"></script>
+    <script type="text/javascript" src="../../js/jquery-1.12.4.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../css/grid.css">
+    
+   <script type="text/javascript">
+        $(document).ready(function() {
+
+            $('#menu li li>a').hide();
+
+            $('#bigM1').mouseenter(function() {
+                $('#smallM1>li>a').stop(true).slideDown(10);
+            }).mouseleave(function(){
+                $('#smallM1>li>a').stop(true).slideUp(10);
+            });
+
+            $('#bigM2').mouseenter(function() {
+                $('#smallM2>li>a').stop(true).slideDown(10);
+            }).mouseleave(function(){
+                $('#smallM2>li>a').stop(true).slideUp(10);
+            });
+
+            $('#bigM3').mouseenter(function() {
+                $('#smallM3>li>a').stop(true).slideDown(10);
+            }).mouseleave(function(){
+                $('#smallM3>li>a').stop(true).slideUp(10);
+            });
+
+            $('#bigM4').mouseenter(function() {
+                $('#smallM4>li>a').stop(true).slideDown(10);
+            }).mouseleave(function(){
+                $('#smallM4>li>a').stop(true).slideUp(10);
+            });
+        });
+    </script>
+    <style type="text/css">
+/*          로고     */
+        body {
+            width: 1200px;
+            margin: 0px auto;
+        }
+
+        #logo {
+            background-color: white;
+            height: 100px;
+            border-bottom: 1px solid rgb(4,72,121);
+        }
+/*        로고 끝     */
+/*        메뉴        */
+        #menu {
+            display: inline-block;
+            height: 600px;
+            background-color: rgb(4,72,121);
+        }
+
+        #menu>ul {
+            padding: 0px;
+        }
+
+        .bigM {
+            display: inline-block;
+            font-weight: 1000;
+            list-style: none;
+            width: 200px;
+            height: 50px;
+            text-align: center;
+            color:white;
+            line-height: 50px;
+            margin-bottom: 2px;
+            box-sizing: border-box;
+            border-top: 1px solid;
+            border-bottom: 1px solid;
+        }
+        
+        #menu li>ul {
+            display: block;
+            padding: 0px;
+            height: 40px;
+            margin: 0px;
+        }
+
+        #menu li li {
+            list-style: none;
+            width: 100%;
+            height: 100%;
+            padding: 0px;
+        }
+
+        .smallM{
+            color: rgb(4,72,121);
+            background-color: white;
+            display: inline-block;
+            width: 100%;
+            height: 40px;
+            line-height: 40px;
+            text-decoration: none;
+        }
+        .smallM:HOVER{
+        	color: black;
+        }
+         
+
+/*        메뉴 끝          */
+/*        로그인            */
+		#bin{
+		height:50px; 
+		}
+        #login {
+        	padding: 10px;
+        	text-align: right;
+            height: 30px;
+            background-color: rgba(4,72,121,1);
+			position: fixed;
+        }
+        
+        #loginUser{
+        	color:white;
+        	text-decoration: none;
+        }
+        #logout{
+        	color:gray;
+        	text-decoration: none;
+        }
+        #logout:HOVER{
+        	color: red;
+        }
+/*       로그인 끝*/
+/*        메인        */
+        #sector{
+            margin: 5px;
+        }
+        
+/*        메인끝        */
+    </style>

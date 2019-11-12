@@ -1,0 +1,97 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+   pageEncoding="UTF-8"%>
+<div id="header">
+	<%
+		String root = request.getContextPath();
+	%>
+        <!-- logo -->
+        <div id="login" class="row">
+        	<!-- id,name session 처리 -->
+	        <div class="grid12">
+		        <span>
+		        <%
+		        if(session.getAttribute("login") != null) {
+		        %>
+		        <a id="loginUser" href="myInfoMain.bit"><%=session.getAttribute("name") %></a>
+		        <%} else { %>
+		        ???
+		        <%} %>
+		        </span>
+       			<a id="logout" href="<%=root%>/login.bit">로그아웃</a>
+	       	</div>
+        </div >
+        <div id="bin" class="row">
+                <div class="grid12">&nbsp;</div>
+        </div>
+        <div id="logo" class="row">
+            <div id="logo" class="grid12">
+            <a href="<%=root %>/lms/myinfo/myInfoMain.bit">
+            <img alt="LMS_logo" src="<%=root %>/imgs/LMS_logo.jpg"/>
+            </a>
+			</div>
+            
+          
+            <div id="menu" class="grid02">
+                <ul>
+                    <li id="bigM1" class="bigM">수업관리
+                        <ul id="smallM1">
+                            <li><a class="smallM" href="<%=root %>/lms/teachManage/lectureList.bit">개설강좌현황</a></li>
+                            <%
+                            if(((String)session.getAttribute("id")).substring(0,2).equals("EM")) {
+                            %>
+                            <li><a class="smallM" href="<%=root %>/lms/teachManage/joinList.bit">교육신청승인</a></li>
+                            <%
+                            }
+                            %>
+                            
+                        </ul>
+                    </li>
+                    <br>
+                    <li id="bigM2" class="bigM">수업지원
+                        <ul id="smallM2">
+                            <li><a class="smallM" href="<%=root %>/lms/teachSupport/noticeList.bit">공지사항</a></li>
+                            <li><a class="smallM" href="<%=root %>/lms/teachSupport/useGuideList.bit">이용안내</a></li>
+                            <li><a class="smallM" href="<%=root %>/lms/teachSupport/faqList.bit">FAQ</a></li>
+                            <%
+                            if(((String)session.getAttribute("id")).substring(0,2).equals("EM")) {
+                            %>
+                            <li><a class="smallM" href="<%=root %>/lms/teachSupport/infoCenterList.bit">고객센터</a></li>
+                            <%
+                            }
+                            %>
+                        </ul>
+                    </li>
+                    <br>
+                    <li id="bigM3" class="bigM">커뮤니티
+                        <ul id="smallM3">
+                        	<%
+                            if(!((String)session.getAttribute("id")).substring(0,2).equals("EM")) {
+                            %>
+                            <li><a class="smallM" href="<%=root %>/lms/community/assignBoard.bit">과제게시판</a></li>
+                            <li><a class="smallM" href="<%=root %>/lms/community/sourceBoard.bit">자료실</a></li>
+                            <%
+                            }
+                            %>
+                            <li><a class="smallM" href="<%=root %>/lms/community/lectureEstimate.bit">강의평가</a></li>
+                            <li><a class="smallM" href="<%=root %>/lms/community/teacherEstimate.bit">강사평가</a></li>
+                        </ul>
+                    </li>
+                    <br>
+                    <li id="bigM4" class="bigM">My서비스
+                        <ul id="smallM4">
+                            <li><a class="smallM" href="<%=root %>/lms/myinfo/myInfoMain.bit">홈</a></li>
+                            <li><a class="smallM" href="<%=root %>/lms/myinfo/myInfoEdit.bit">회원정보변경</a></li>
+                            <li><a class="smallM" href="<%=root %>/lms/myinfo/myInfoPwEdit.bit">비밀번호변경</a></li>
+                            <li><a class="smallM" href="<%=root %>/lms/myinfo/myInfoJoinOut.bit">탈퇴</a></li>
+                            <%
+                            if(((String)session.getAttribute("id")).substring(0,2).equals("ST")) {
+                            %>
+                            <li><a class="smallM" href="<%=root %>/lms/myinfo/myInfoPrtComplete.bit">수료증출력</a></li>
+                            <%
+                            }
+                            %>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div id="main" class="grid10">
